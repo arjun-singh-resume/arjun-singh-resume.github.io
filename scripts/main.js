@@ -100,7 +100,7 @@ function setupNavigation() {
         if (currentSection) {
             currentSection.classList.add('highlight');
             
-            // Remove highlight after 3 seconds
+            // Remove highlight after 5 seconds
             setTimeout(() => {
                 currentSection.classList.remove('highlight');
             }, 5000);
