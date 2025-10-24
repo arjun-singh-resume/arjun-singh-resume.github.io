@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun Singh - Resume</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background-color: #f5f7fa;
+            font-size: 13px;
+        }
+        
+        .resume-container {
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            position: relative;
+        }
+        
+        /* Left Sidebar */
+        .sidebar {
+            width: 35%;
+            background: linear-gradient(to bottom, #1a3a5f, #2c5282);
+            color: white;
+            padding: 25px 18px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .profile {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+        
+.avatar-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    margin: 0 auto 12px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+        .name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 13px;
+            opacity: 0.9;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+        
+        .contact-item svg {
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin: 20px 0 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background: #63b3ed;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skills-list li {
+            margin-bottom: 6px;
+            font-size: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .skills-list li:before {
+            content: '▸';
+            margin-right: 6px;
+            color: #63b3ed;
+            flex-shrink: 0;
+        }
+        
+        .education-item, .certification-item {
+            margin-bottom: 12px;
+        }
+        
+        .education-item h4, .certification-item h4 {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        
+        .education-item p, .certification-item p {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+        
+        .award-item {
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+        
+        .personal-info p {
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+        
+        /* Main Content */
+        .main-content {
+            width: 65%;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .summary {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .summary p {
+            font-size: 13px;
+            color: #4a5568;
+        }
+        
+        .main-section {
+            margin-bottom: 20px;
+        }
+        
+        .main-section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .main-section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #2c5282;
+        }
+        
+        .competency-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .competency-item {
+            font-size: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .competency-item:before {
+            content: '•';
+            color: #2c5282;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+        
+        .experience-item {
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+        
+        .company {
+            font-weight: 700;
+            color: #2c5282;
+            font-size: 14px;
+        }
+        
+        .period {
+            font-size: 12px;
+            color: #718096;
+            background: #f7fafc;
+            padding: 2px 6px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+        
+        .position {
+            font-style: italic;
+            color: #4a5568;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .responsibilities {
+            list-style: none;
+        }
+        
+        .responsibilities li {
+            margin-bottom: 6px;
+            font-size: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .responsibilities li:before {
+            content: '▪';
+            color: #2c5282;
+            margin-right: 6px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        
+        .technical-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        
+        .tech-category h4 {
+            font-size: 13px;
+            color: #2c5282;
+            margin-bottom: 6px;
+        }
+        
+        .tech-items {
+            font-size: 12px;
+        }
+        
+        .tech-items p {
+            margin-bottom: 4px;
+        }
+        
+        .notice-badge {
+            display: inline-block;
+            background: #48bb78;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        
+        /* Page 2 Styles */
+        .page-2 {
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+        
+        .page-2-sidebar {
+            width: 35%;
+            background: linear-gradient(to bottom, #1a3a5f, #2c5282);
+            color: white;
+            padding: 25px 18px;
+        }
+        
+        .page-2-main {
+            width: 65%;
+            padding: 25px;
+        }
+        
+        .project-item {
+            margin-bottom: 15px;
+        }
+        
+        .project-title {
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        
+        .project-description {
+            font-size: 12px;
+            color: #4a5568;
+        }
+        
+        /* Page Break for Printing */
+        @media print {
+            body {
+                background: white;
+                font-size: 12px;
+            }
+            
+            .resume-container, .page-2 {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+                min-height: 0;
+                height: auto;
+            }
+            
+            .page-2 {
+                page-break-before: always;
+            }
+            
+            @page {
+                margin: 0.5in;
+                size: letter;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resume-container, .page-2 {
+                flex-direction: column;
+            }
+            
+            .sidebar, .main-content, .page-2-sidebar, .page-2-main {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="resume-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+
+<div class="profile">
+    <img src="Profile_Pic.png" alt="Arjun Singh" class="avatar-img">
+    <h1 class="name">Arjun Singh</h1>
+    <div class="title">Assistant Manager – Credit Control | Revenue Assurance | Billing | Telecom Automation</div>
+</div>
+
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="white" stroke-width="1.2"/>
+                        <circle cx="12" cy="10" r="3" stroke="white" stroke-width="1.2"/>
+                    </svg>
+                    <span>Pune, India</span>
+                </div>
+                <div class="contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19 19 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.06.7.24 1.37.54 2" stroke="white" stroke-width="1.2"/>
+                    </svg>
+                    <span>+91-8149090364</span>
+                </div>
+                <div class="contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="white" stroke-width="1.2"/>
+                        <polyline points="22,6 12,13 2,6" stroke="white" stroke-width="1.2"/>
+                    </svg>
+                    <span>arjun.singh.tata@gmail.com</span>
+                </div>
+            </div>
+            
+            <h3 class="section-title">Core Competencies</h3>
+            <ul class="skills-list">
+                <li>Credit Control Management : End-to-end oversight of dunning, disconnection, restoration, SR management and bounce case resolution.</li>                
+                <li>Risk Mitigation & Fraud Control AVCV : Proficient in Address Verification (AV), Credit Verification (CV), and fraud detection workflows.</li>                
+                <li>Revenue Assurance & Billing Integrity : Expertise in billing reconciliation, waiver management, and leak prevention across the OSS/BSS lifecycle.</li>
+                <li>Process Automation & Tool Development : Skilled in developing in-house automation tools using MS Access, VBA, and SQL Server to enhance efficiency and SLA adherence.</li>
+                <li>CRM & Billing Platforms : Hands-on experience with Geneva, SFDC (Salesforce), Tallyman, and Metasolv.</li>
+                <li>Governance & Reporting : Adept at audit support, SLA reporting, Root Cause Analysis (RCA), and creating insightful MIS dashboards.</li>
+                <li>Exception Handling & Operational Support : Proven ability to manage complex exceptions and ensure data integrity.</li>
+            </ul>
+            
+
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="summary">
+                <h2 class="main-section-title">Professional Summary</h2>
+                <p>Results-driven Telecom Professional with over 15 years of experience specializing in Credit Control, Revenue Assurance, and Billing Operations. Expert in managing the end-to-end collections lifecycle—including dunning, disconnection, restoration, and fraud control—while leveraging deep OSS/BSS ecosystem knowledge to ensure revenue integrity from provisioning to billing. Proven ability to enhance operational efficiency and enforce SLA governance through the custom development of automation tools using MS Access, VBA, and SQL Server.</p>
+            </div>
+            
+            <div class="main-section">
+                <h2 class="main-section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="company">Tata Teleservices Ltd — Pune</div>
+                        <div class="period">Aug 2015 — Sep 2025</div>
+                    </div>
+                    <div class="position">Assistant Manager — Credit Control</div>
+                    <ul class="responsibilities">
+                        <li>Operational Management : Executed and governed the critical Credit Control lifecycle—from dunning and disconnection to restoration—including resolving SR errors by raising E-process requests and coordinating with IT teams to synchronize services across network (OSS) and billing (BSS) systems.</li>
+                        <li>Process Automation & Tool Development : Spearheaded the development of multiple in-house automation tools (SRT, RCMS, De-Dupe, TBD Tracker) using MS Access, VBA, and SQL Server, resulting in significant improvements in efficiency and SLA adherence.</li>
+                        <li>Process Improvement : Streamlined the Service Request (SR) lifecycle by creating integrated tracking systems between Tallyman and custom MS Access dashboards, enhancing visibility and control.</li>
+                        <li>Risk & Fraud Mitigation : Played a key role in fraud detection workflows, supported Address Verification/Credit Verification (AV/CV) processes, and managed complex exception handling.</li>
+                        <li>Cross-Functional Collaboration : Partnered effectively with IT, Finance, and Network teams to identify and resolve issues, minimizing revenue leakage and ensuring end-to-end data integrity.</li>                        
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="company">Tata Communications Ltd — Pune</div>
+                        <div class="period">Apr 2010 — Aug 2015</div>
+                    </div>
+                    <div class="position">Customer Service Executive — Billing & Revenue Assurance</div>
+                    <ul class="responsibilities">
+                        <li>Revenue Assurance Controls : Conducted daily Geneva-Metasolv reconciliations to identify and resolve provisioning-billing mismatches, preventing revenue leakage.</li>
+                        <li>Billing Operations : Managed billing exceptions, waiver approvals, and collection reconciliations to ensure accuracy and timeliness.</li>
+                        <li>Reporting Automation : Automated key MIS reports and dashboards using Excel and MS Access, reducing manual effort and enhancing data reliability for audit and compliance.</li>
+                        <li>Invoice & Usage Validation : Supported invoice validation and usage reconciliation processes, ensuring billed amounts matched actual service consumption.</li>                    
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="company">Lobo Staffing Solutions (Tata Communications)</div>
+                        <div class="period">Oct 2008 — Apr 2010</div>
+                    </div>
+                    <div class="position">Billing Executive — Revenue Assurance</div>
+                    <ul class="responsibilities">
+                        <li>Billing Validation : Executed invoice validation and reconciled billed versus actual usage data to ensure billing accuracy.</li>                
+                        <li>Leakage Identification : Proactively identified and escalated provisioning mismatches to technical teams, contributing to minimized revenue loss.</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Page 2 -->
+    <div class="page-2">
+        <aside class="page-2-sidebar">
+
+            <h3 class="section-title">Education</h3>
+            <div class="education-item">
+                <h4>B.E. - Computer Science & Engineering</h4>
+                <p>Pt. Ravi Shankar Shukla University, Raipur, CG.</p>
+                <p>Score 61%  in Year 2006</p>
+            </div>
+            
+            <h3 class="section-title">Certifications</h3>
+            <div class="certification-item">
+                <h4>ITIL Foundation</h4>
+                <p>TÜV SÜD (2013)</p>
+            </div>
+            <div class="certification-item">
+                <h4>PMP Training</h4>
+                <p>40 Hours (2013)</p>
+            </div>
+            <div class="certification-item">
+                <h4>MS Project</h4>
+                <p>Version 2013</p>
+            </div>
+
+            <h3 class="section-title">Awards & Recognition</h3>
+            <div class="award-item">
+                <p>Hi-Filler & ICONS Awards — Tata Teleservices</p>
+            </div>
+            <div class="award-item">
+                <p>Hi5, BRAVO, and Performance Excellence Awards — Tata Communications</p>
+            </div>
+            <div class="award-item">
+                <p>Converted to On-Roll within 1.5 years based on consistent performance</p>
+            </div>
+            
+            <h3 class="section-title">Personal Dossier</h3>
+            <div class="personal-info">
+                <p><strong>Date of Birth :</strong> 05-Mar-1981</p>
+                <p><strong>Father's Name :</strong> Ramkumar Singh</p>
+                <p><strong>Marital Status :</strong> Married</p>
+                <p><strong>Languages Known :</strong> English, Hindi</p>
+                <p><strong>Address :</strong> Pune, Maharashtra, India</p>
+                <p><strong>Preferred Location :</strong> Pune / Mumbai / Hybrid</p>
+                <div class="notice-badge">Notice Period : Immediately Available</div>
+            </div>
+        </aside>
+        
+        <main class="page-2-main">
+            <div class="main-section">
+                <h2 class="main-section-title">Technical Skills</h2>
+                <div class="technical-grid">
+                    <div class="tech-category">
+                        <h4>Databases & Tools</h4>
+                        <div class="tech-items">
+                            <p>MS Access (VBA, Queries, Macros)</p>
+                            <p>SQL Server, MySQL</p>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4>Analytics & Reporting</h4>
+                        <div class="tech-items">
+                            <p>Excel (Pivot, Dashboards, Macros)</p>
+                            <p>PowerPoint, QlikView, Viznet</p>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4>Telecom Systems</h4>
+                        <div class="tech-items">
+                            <p>Geneva, SFDC, Tallyman, Metasolv</p>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h4>Automation & Development</h4>
+                        <div class="tech-items">
+                            <p>In-house tool development for Credit Control and RA workflows</p>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+<div class="main-section">
+    <h2 class="main-section-title">Selected Projects & Automation</h2>
+    
+    <div class="project-item">
+        <div class="project-title">De-Dupe & High-Risk Profiling Tool</div>
+        <ul class="responsibilities">  <!-- Changed from project-description to responsibilities -->
+            <li>Engineered a rules-based application to evaluate existing customer eligibility for new services, reducing fraud and credit risk.</li>
+            <li>Integrated real-time validation with billing systems, using a weighted checklist (6-month payment history, outstanding debt, FMS abuse, safe custody status) to generate a definitive eligibility scorecard (Green/Red signal).</li>
+            <li>Automated CAF (Customer Application Form) detail tracking for team performance MIS and reporting.</li>
+        </ul>
+    </div>
+    
+    <div class="project-item">
+        <div class="project-title">Service Request Tracker (SRT) – Workflow Automation</div>
+        <ul class="responsibilities">  <!-- Changed from project-description to responsibilities -->
+            <li>Built a comprehensive SR monitoring dashboard that provided real-time visibility into the service request lifecycle, SLA adherence, and root-cause trends.</li>
+            <li>Automated SR allocation to available agency team members, ensuring priority errors were resolved within the defined 4-hour SLA.</li>
+            <li>Included performance analytics for team workload management and workflow efficiency reporting.</li>
+        </ul>
+    </div>
+    
+    
+    <div class="project-item">
+        <div class="project-title">Revenue Assurance & Billing Reconciliation Tool</div>
+        <ul class="responsibilities">  <!-- Changed from project-description to responsibilities -->
+            <li>Developed an automated tool to reconcile provisioning data (Metasolv) with billing data (Geneva), identifying mismatches such as Provisioned-But-Not-Billed (PBNB) services.</li>
+            <li>The solution reduced manual reconciliation effort by 70% and significantly improved billing accuracy across the OSS/BSS lifecycle.</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="main-section">
+    <h2 class="main-section-title">Technical Skills & Self-Directed Projects</h2>
+    
+    <div class="project-item">
+        <div class="project-title">Full-Stack Development & Automation</div>
+        <ul class="responsibilities">
+            <li>Proficient in MS Access (VBA), SQL Server, and Google Apps Script for workflow automation.</li>
+            <li>Expanding skills in full-stack development with Python, JavaScript, and web technologies (PHP, HTML, CSS) for SaaS prototyping.</li>
+        </ul>
+    </div>
+    
+    
+    <div class="project-item">
+        <div class="project-title">Project Portfolio</div>
+        <ul class="responsibilities">
+            <li>Build and deploy end-to-end application prototypes, including multi-tenant SaaS platforms for business management (inventory, billing, finance).</li>
+            <li>Develop AI-driven tools (Telegram bots, document processors) to solve real-world operational problems.</li>
+        </ul>
+    </div>
+</div>
+
+</main>
+
+        </div>
+</body>
+</html>
