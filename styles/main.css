@@ -567,3 +567,45 @@ body {
     position: relative;
     z-index: 1;
 }
+
+/* Enhanced Footer Links Styling */
+.footer-links a {
+    color: white !important;
+    text-decoration: none;
+    padding: 8px 15px;
+    background: #2c5282;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-links a:hover {
+    background: #1a365d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* PDF Download specific styling */
+.footer-links a.pdf-download {
+    background: #d69e2e !important;
+}
+
+.footer-links a.pdf-download:hover {
+    background: #b7791f !important;
+}
+
+/* Print button in footer */
+.footer-links a[onclick*="print"] {
+    background: #e53e3e !important;
+}
+
+.footer-links a[onclick*="print"]:hover {
+    background: #c53030 !important;
+}
+
