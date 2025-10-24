@@ -532,3 +532,23 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
+/* Active Navigation Highlighting */
+.header-nav a.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Highlight Animation */
+.main-section, .summary {
+    transition: all 0.3s ease;
+}
+
+.main-section.highlight, .summary.highlight {
+    background: linear-gradient(90deg, rgba(44, 82, 130, 0.05) 0%, transparent 100%);
+    border-left: 4px solid #2c5282;
+    padding-left: 10px;
+    margin-left: -10px;
+}
