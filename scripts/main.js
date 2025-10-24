@@ -18,20 +18,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
 // Enhanced print functionality with automatic settings
 function setupPrint() {
     const printButton = document.querySelector('.print-button');
@@ -95,32 +81,95 @@ function setupPrint() {
     });
 }
 
-// Add active state to navigation
-window.addEventListener('scroll', function() {
+// Enhanced navigation with active highlighting
+function setupNavigation() {
     const sections = document.querySelectorAll('.main-section, .summary');
     const navLinks = document.querySelectorAll('.header-nav a');
     
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - 100)) {
-            current = section.getAttribute('id');
+    // Remove highlight from all sections
+    function removeHighlights() {
+        sections.forEach(section => {
+            section.classList.remove('highlight');
+        });
+    }
+    
+    // Add highlight to current section
+    function highlightSection(sectionId) {
+        removeHighlights();
+        const currentSection = document.getElementById(sectionId);
+        if (currentSection) {
+            currentSection.classList.add('highlight');
+            
+            // Remove highlight after 3 seconds
+            setTimeout(() => {
+                currentSection.classList.remove('highlight');
+            }, 3000);
         }
-    });
-
+    }
+    
+    // Update active nav link and highlight section
+    function updateActiveNav() {
+        let current = '';
+        const scrollPosition = window.pageYOffset + 100;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Smooth scroll with highlight
     navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                // Scroll to section
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Highlight the section
+                setTimeout(() => {
+                    highlightSection(targetId);
+                }, 500);
+                
+                // Update active nav
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
     });
-});
+    
+    // Update on scroll
+    window.addEventListener('scroll', updateActiveNav);
+    
+    // Initial update
+    updateActiveNav();
+}
 
-// Add loading animation
+// Add loading animation and setup navigation
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize print functionality
     setupPrint();
+    
+    // Initialize navigation with highlighting
+    setupNavigation();
     
     // Add fade-in animation to elements
     const elements = document.querySelectorAll('.resume-container, .page-2');
@@ -135,32 +184,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, index * 100);
     });
 });
-
-// Add active class to current section in navigation
-function highlightNavigation() {
-    const sections = document.querySelectorAll('.main-section, .summary');
-    const navLinks = document.querySelectorAll('.header-nav a');
-    
-    let currentSection = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-            link.classList.add('active');
-        }
-    });
-}
-
-// Call the function on scroll
-window.addEventListener('scroll', highlightNavigation);
 
 // Handle responsive behavior
 function handleResize() {
@@ -182,7 +205,7 @@ window.addEventListener('load', function() {
         sidebar.style.minHeight = '11in';
     });
     
-    console.log('Resume loaded successfully with enhanced print features');
+    console.log('Resume loaded successfully with enhanced navigation');
 });
 
 // Handle window resize
@@ -198,5 +221,12 @@ document.addEventListener('keydown', function(e) {
     // Enter key on print button
     if (e.key === 'Enter' && document.activeElement.classList.contains('print-button')) {
         document.querySelector('.print-button').click();
+    }
+});
+
+// Add click outside to close mobile menu (if needed in future)
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.header-nav') && !e.target.closest('.print-button')) {
+        // Handle mobile menu close if implemented later
     }
 });
