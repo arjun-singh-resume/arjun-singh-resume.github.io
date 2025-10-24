@@ -83,7 +83,7 @@ function setupPrint() {
 
 // Enhanced navigation with active highlighting
 function setupNavigation() {
-    const sections = document.querySelectorAll('.main-section, .summary');
+   const sections = document.querySelectorAll('.main-section, .summary, .page-2-sidebar .section-title');
     const navLinks = document.querySelectorAll('.header-nav a');
     
     // Remove highlight from all sections
