@@ -553,16 +553,15 @@ body {
     margin-left: -10px;
 }
 
-/* Full Education Section Highlight */
-#education-content.highlight {
+/* Education Item Highlight */
+.education-item.highlight {
     background: linear-gradient(90deg, rgba(72, 187, 120, 0.15) 0%, transparent 100%) !important;
-    border-left: 4px solid #48bb78 !important;
-    padding-left: 10px;
-    margin-left: -10px;
-    border-radius: 6px;
+    border-left: 3px solid #48bb78 !important;
+    padding-left: 8px;
+    margin-left: -8px;
+    border-radius: 4px;
     transition: all 0.3s ease;
-    padding: 15px 10px;
-    margin: 10px -10px;
+    margin-bottom: 15px !important;
 }
 
 .page-2-sidebar .section-title {
