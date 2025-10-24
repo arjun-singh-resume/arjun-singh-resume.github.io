@@ -130,3 +130,22 @@
         padding: 15px 12px;
     }
 }
+
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .footer-links a {
+        width: 200px;
+        justify-content: center;
+    }
+    
+    .print-button, .back-to-top {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
