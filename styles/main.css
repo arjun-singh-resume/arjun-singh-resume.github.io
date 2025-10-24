@@ -553,15 +553,15 @@ body {
     margin-left: -10px;
 }
 
-/* Sidebar Section Highlight - Enhanced Visibility */
+/* Sidebar Section Highlight - Green for Perfect Contrast */
 .page-2-sidebar .section-title.highlight {
-    background: rgba(255, 255, 255, 0.25) !important;
-    border-left: 4px solid #90cdf4 !important;
+    background: linear-gradient(90deg, rgba(72, 187, 120, 0.25) 0%, transparent 100%) !important;
+    border-left: 4px solid #48bb78 !important;
     padding-left: 10px;
     margin-left: -10px;
     border-radius: 4px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 12px rgba(72, 187, 120, 0.3);
 }
 
 /* Ensure sidebar highlights are visible */
