@@ -1,0 +1,143 @@
+/* Enhanced Print Styles */
+@media print {
+    @page {
+        size: letter;
+        margin: 0;
+    }
+    
+    body {
+        background: white !important;
+        font-size: 11px;
+        color: black;
+        line-height: 1.2;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .professional-header,
+    .print-button,
+    .back-to-top,
+    .professional-footer {
+        display: none !important;
+    }
+    
+    .resume-container, .page-2 {
+        box-shadow: none !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        min-height: 11in !important;
+        height: auto !important;
+        page-break-inside: avoid;
+    }
+    
+    .page-2 {
+        page-break-before: always;
+    }
+    
+    .sidebar, .page-2-sidebar {
+        background: linear-gradient(to bottom, #1a3a5f, #2c5282) !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        width: 32% !important;
+        min-height: 11in !important;
+    }
+    
+    .main-content, .page-2-main {
+        width: 68% !important;
+        padding: 20px !important;
+    }
+    
+    .notice-badge {
+        background: #48bb78 !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+    
+    .section-title:after,
+    .main-section-title:after {
+        background: #63b3ed !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* Better control over technical skills layout */
+    .technical-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+    
+    .tech-category {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    
+    .tech-items p {
+        margin-bottom: 2px !important;
+        font-size: 10px !important;
+    }
+    
+    .experience-item {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 12px !important;
+    }
+    
+    .project-item {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* Adjust spacing for print */
+    .main-section {
+        margin-bottom: 15px !important;
+    }
+    
+    .responsibilities li {
+        margin-bottom: 4px !important;
+        font-size: 10px !important;
+    }
+    
+    .summary p {
+        font-size: 11px !important;
+    }
+    
+    .job-header {
+        margin-bottom: 4px !important;
+    }
+    
+    .company {
+        font-size: 12px !important;
+    }
+    
+    .position {
+        font-size: 11px !important;
+        margin-bottom: 6px !important;
+    }
+    
+    /* Ensure proper text colors in print */
+    .skills-list li:before {
+        color: #63b3ed !important;
+    }
+    
+    .responsibilities li:before {
+        color: #2c5282 !important;
+    }
+    
+    /* Full height sidebar enforcement */
+    .sidebar::before,
+    .page-2-sidebar::before {
+        display: none !important;
+    }
+}
