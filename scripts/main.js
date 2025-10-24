@@ -103,7 +103,7 @@ function setupNavigation() {
             // Remove highlight after 3 seconds
             setTimeout(() => {
                 currentSection.classList.remove('highlight');
-            }, 3000);
+            }, 5000);
         }
     }
     
