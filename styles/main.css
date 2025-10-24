@@ -553,12 +553,19 @@ body {
     margin-left: -10px;
 }
 
-/* Sidebar Section Highlight */
+/* Sidebar Section Highlight - Enhanced Visibility */
 .page-2-sidebar .section-title.highlight {
-    background: rgba(255, 255, 255, 0.15);
-    border-left: 4px solid #63b3ed;
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-left: 4px solid #90cdf4 !important;
     padding-left: 10px;
     margin-left: -10px;
     border-radius: 4px;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure sidebar highlights are visible */
+.page-2-sidebar .section-title {
+    position: relative;
+    z-index: 1;
 }
