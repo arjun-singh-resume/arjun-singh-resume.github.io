@@ -149,13 +149,5 @@
     }
 }
 
-@media (max-width: 768px) {
-    .professional-header,
-    .sidebar,
-    .page-2-sidebar,
-    .professional-footer {
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-    }
-}
+
 
