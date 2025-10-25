@@ -653,4 +653,148 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
+/* Glass Morphism Effect */
+.professional-header {
+    background: linear-gradient(135deg, 
+        rgba(26, 54, 93, 0.85) 0%, 
+        rgba(44, 82, 130, 0.85) 100%) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
 
+.professional-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(26, 54, 93, 0.7) 0%, 
+        rgba(44, 82, 130, 0.7) 100%);
+    z-index: -1;
+}
+
+/* Sidebar Glass Effect */
+.sidebar, .page-2-sidebar {
+    background: linear-gradient(to bottom, 
+        rgba(26, 58, 95, 0.85) 0%, 
+        rgba(44, 82, 130, 0.85) 100%) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.sidebar::before, .page-2-sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, 
+        rgba(26, 58, 95, 0.7) 0%, 
+        rgba(44, 82, 130, 0.7) 100%);
+    z-index: -1;
+}
+
+/* Footer Glass Effect */
+.professional-footer {
+    background: linear-gradient(135deg, 
+        rgba(45, 55, 72, 0.85) 0%, 
+        rgba(74, 85, 104, 0.85) 100%) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.professional-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(45, 55, 72, 0.7) 0%, 
+        rgba(74, 85, 104, 0.7) 100%);
+    z-index: -1;
+}
+
+/* Enhanced body background for glass effect */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) fixed !important;
+    min-height: 100vh;
+}
+
+/* Resume Container Glass Effect */
+.resume-container, .page-2 {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Enhanced buttons with glass effect */
+.print-button, .back-to-top {
+    background: rgba(229, 62, 62, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.print-button:hover, .back-to-top:hover {
+    background: rgba(197, 48, 48, 0.95) !important;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Footer buttons glass effect */
+.footer-links a {
+    background: rgba(44, 82, 130, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.footer-links a:hover {
+    background: rgba(26, 54, 93, 0.95) !important;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* PDF download button specific */
+.footer-links a.pdf-download {
+    background: rgba(214, 158, 46, 0.9) !important;
+}
+
+.footer-links a.pdf-download:hover {
+    background: rgba(183, 121, 31, 0.95) !important;
+}
+
+/* Print button in footer */
+.footer-links a[onclick*="print"] {
+    background: rgba(229, 62, 62, 0.9) !important;
+}
+
+.footer-links a[onclick*="print"]:hover {
+    background: rgba(197, 48, 48, 0.95) !important;
+}
