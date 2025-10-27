@@ -1,1 +1,0 @@
-# arjun-singh-resume.github.io
