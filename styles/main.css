@@ -1,1 +1,656 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    color: #333;
+    background-color: #f5f7fa;
+    font-size: 13px;
+}
+
+/* Professional Header */
+.professional-header {
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.header-content h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header-content p {
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.header-nav a:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-2px);
+}
+
+/* Interactive Buttons */
+.print-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2c5282;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.print-button:hover {
+    background: #1a365d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2c5282;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.back-to-top:hover {
+    background: #1a365d;
+    transform: translateY(-2px);
+}
+
+/* Resume Container */
+.resume-container {
+    max-width: 8.5in;
+    min-height: 11in;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    position: relative;
+    align-items: stretch;
+}
+
+/* Enhanced Sidebar Styles */
+.sidebar {
+    width: 35%;
+    background: linear-gradient(to bottom, #1a3a5f, #2c5282);
+    color: white;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 11in;
+    position: relative;
+}
+
+/* Create a pseudo-element for full background coverage */
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #1a3a5f, #2c5282);
+    z-index: -1;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.avatar-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    margin: 0 auto 12px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 13px;
+    opacity: 0.9;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.contact-item svg {
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 20px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background: #63b3ed;
+}
+
+.skills-list {
+    list-style: none;
+    flex: 1;
+}
+
+.skills-list li {
+    margin-bottom: 6px;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.skills-list li:before {
+    content: '▸';
+    margin-right: 6px;
+    color: #63b3ed;
+    flex-shrink: 0;
+}
+
+.education-item, .certification-item {
+    margin-bottom: 12px;
+}
+
+.education-item h4, .certification-item h4 {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.education-item p, .certification-item p {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+.award-item {
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.personal-info p {
+    margin-bottom: 6px;
+    font-size: 12px;
+}
+
+/* Main Content */
+.main-content {
+    width: 65%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.summary p {
+    font-size: 13px;
+    color: #4a5568;
+}
+
+.main-section {
+    margin-bottom: 20px;
+}
+
+.main-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e2e8f0;
+    position: relative;
+}
+
+.main-section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #2c5282;
+}
+
+.competency-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.competency-item {
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.competency-item:before {
+    content: '•';
+    color: #2c5282;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.experience-item {
+    margin-bottom: 18px;
+    page-break-inside: avoid;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.company {
+    font-weight: 700;
+    color: #2c5282;
+    font-size: 14px;
+}
+
+.period {
+    font-size: 12px;
+    color: #718096;
+    background: #f7fafc;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.position {
+    font-style: italic;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.responsibilities {
+    list-style: none;
+}
+
+.responsibilities li {
+    margin-bottom: 6px;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.responsibilities li:before {
+    content: '▪';
+    color: #2c5282;
+    margin-right: 6px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+/* Enhanced Technical Skills Grid */
+.technical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.tech-category {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.tech-category h4 {
+    font-size: 13px;
+    color: #2c5282;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.tech-items {
+    font-size: 12px;
+}
+
+.tech-items p {
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.notice-badge {
+    display: inline-block;
+    background: #48bb78;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Page 2 Styles */
+.page-2 {
+    max-width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto 20px;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: stretch;
+}
+
+.page-2-sidebar {
+    width: 35%;
+    background: linear-gradient(to bottom, #1a3a5f, #2c5282);
+    color: white;
+    padding: 25px 18px;
+    min-height: 11in;
+    position: relative;
+}
+
+.page-2-sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #1a3a5f, #2c5282);
+    z-index: -1;
+}
+
+.page-2-main {
+    width: 65%;
+    padding: 25px;
+}
+
+.project-item {
+    margin-bottom: 15px;
+}
+
+.project-title {
+    font-weight: 700;
+    color: #2c5282;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.project-description {
+    font-size: 12px;
+    color: #4a5568;
+}
+
+/* Professional Footer */
+.professional-footer {
+    background: #2d3748;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Sidebar Content Wrapper for better spacing */
+.sidebar-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure contact info and sections fill space properly */
+.contact-info {
+    margin-bottom: auto;
+}
+
+/* Additional spacing improvements */
+.personal-info {
+    margin-top: auto;
+}
+
+/* Print-specific inline styles for better control */
+@media screen {
+    .sidebar, .page-2-sidebar {
+        background: linear-gradient(to bottom, #1a3a5f, #2c5282);
+    }
+}
+/* PDF Download Link Styling */
+.pdf-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: #d69e2e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.pdf-download:hover {
+    background: #b7791f;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Active Navigation Highlighting */
+.header-nav a.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Highlight Animation */
+.main-section, .summary {
+    transition: all 0.3s ease;
+}
+
+.main-section.highlight, .summary.highlight {
+    background: linear-gradient(90deg, rgba(44, 82, 130, 0.05) 0%, transparent 100%);
+    border-left: 4px solid #2c5282;
+    padding-left: 10px;
+    margin-left: -10px;
+}
+
+/* Education Content Highlight */
+#education-content.highlight {
+    background: linear-gradient(90deg, rgba(72, 187, 120, 0.15) 0%, transparent 100%) !important;
+    border-left: 4px solid #48bb78 !important;
+    padding: 15px 10px;
+    margin: 10px -10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.page-2-sidebar .section-title {
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced Footer Links Styling */
+.footer-links a {
+    color: white !important;
+    text-decoration: none;
+    padding: 8px 15px;
+    background: #2c5282;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-links a:hover {
+    background: #1a365d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* PDF Download specific styling */
+.footer-links a.pdf-download {
+    background: #d69e2e !important;
+}
+
+.footer-links a.pdf-download:hover {
+    background: #b7791f !important;
+}
+
+/* Print button in footer */
+.footer-links a[onclick*="print"] {
+    background: #e53e3e !important;
+}
+
+.footer-links a[onclick*="print"]:hover {
+    background: #c53030 !important;
+}
+
+/* Red Back Color for Right-Side Buttons */
+.print-button {
+    background: #e53e3e !important; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.print-button:hover {
+    background: #c53030 !important; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.back-to-top {
+    background: #e53e3e !important; /* Red color */
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.back-to-top:hover {
+    background: #c53030 !important; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
 
