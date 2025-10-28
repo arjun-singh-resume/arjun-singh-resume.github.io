@@ -656,7 +656,7 @@ body {
 /* ===== Floating Left-Side Button (Same as Right) ===== */
 .floating-left {
     position: fixed;
-    top: 50%;
+    top: 20px;
     left: 20px;
     transform: translateY(-50%);
     display: flex;
