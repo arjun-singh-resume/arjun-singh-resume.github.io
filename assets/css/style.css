@@ -837,7 +837,7 @@ body {
 
 .nav-button {
     background: linear-gradient(135deg, #4a90e2, #007aff);
-    color: white;
+    color: red;
     border: none;
     border-radius: 30px;
     padding: 12px 30px;
