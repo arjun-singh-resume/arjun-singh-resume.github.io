@@ -838,7 +838,7 @@ body {
 /* Floating Vertical Buttons (Right Side) */
 .floating-buttons {
     position: fixed;
-    top: 50%;
+    top: 20%;
     right: 20px;
     transform: translateY(-50%);
     display: flex;
@@ -860,7 +860,7 @@ body {
     transition: all 0.3s ease;
     text-align: left;
     display: flex;
-    align-items: 20%;
+    align-items: center;
     gap: 8px;
 }
 
