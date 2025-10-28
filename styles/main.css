@@ -650,15 +650,15 @@ body {
 /* ===== Floating Left-Side Button ===== */
 .floating-left {
     position: fixed;
-    top: 50%;
+    top: 30px;
     left: 20px;
     transform: translateY(-50%);
     z-index: 99999;
 }
 
 .float-btn-left {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: #2c5282;
+    color: white;
     border: none;
     border-radius: 8px;
     padding: 12px 20px;
