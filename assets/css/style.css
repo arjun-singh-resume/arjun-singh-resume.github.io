@@ -860,7 +860,7 @@ body {
     transition: all 0.3s ease;
     text-align: left;
     display: flex;
-    align-items: center;
+    align-items: 20%;
     gap: 8px;
 }
 
