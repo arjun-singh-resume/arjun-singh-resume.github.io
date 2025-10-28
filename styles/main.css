@@ -653,8 +653,16 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
+/* ===== Floating Left-Side Back Button ===== */
+.floating-left {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
 .floating-left .float-btn {
-    background: #e63946; /* Red to match visible print button */
+    background: #2c5282;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -668,10 +676,11 @@ body {
     font-size: 0.9rem;
     font-weight: 600;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .floating-left .float-btn:hover {
-    background: #c82333; /* Darker red for hover */
+    background: #1a365d;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
