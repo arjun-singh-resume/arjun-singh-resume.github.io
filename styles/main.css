@@ -653,37 +653,47 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* ===== Floating Left-Side Button (Same as Right) ===== */
+/* ===== Floating Left-Side Back Button ===== */
 .floating-left {
     position: fixed;
     top: 20px;
     left: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 99999;
+    z-index: 1000;
 }
 
 .floating-left .float-btn {
-    background-color: #e63946; /* same red */
-    color: #fff;
+    background: #2c5282;
+    color: white;
     border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 0.95rem;
-    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .floating-left .float-btn:hover {
-    background-color: #c82333;
-    transform: translateX(5px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+    background: #1a365d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .floating-left {
+        top: 15px;
+        left: 15px;
+    }
+    
+    .floating-left .float-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
 }
