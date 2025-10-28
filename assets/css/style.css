@@ -834,3 +834,22 @@ body {
         margin-left: 1rem;
     }
 }
+
+.nav-button {
+    background: linear-gradient(135deg, #4a90e2, #007aff);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.nav-button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #007aff, #4a90e2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
