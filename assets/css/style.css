@@ -835,21 +835,29 @@ body {
     }
 }
 
+.project-buttons {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .nav-button {
-    background: linear-gradient(135deg, #4a90e2, #007aff);
-    color: red;
+    background: linear-gradient(135deg, #ff4d4d, #cc0000);
+    color: white;
     border: none;
     border-radius: 30px;
-    padding: 12px 30px;
+    padding: 14px 40px;
     margin: 10px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(204, 0, 0, 0.3);
+    display: inline-block;
 }
+
 .nav-button:hover {
+    background: linear-gradient(135deg, #cc0000, #990000);
     transform: translateY(-3px);
-    background: linear-gradient(135deg, #007aff, #4a90e2);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 18px rgba(153, 0, 0, 0.4);
 }
