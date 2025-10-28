@@ -662,7 +662,7 @@ body {
 }
 
 .floating-left .float-btn {
-    background: #2c5282;
+    background: red;
     color: white;
     border: none;
     padding: 10px 15px;
